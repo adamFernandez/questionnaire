@@ -1,0 +1,160 @@
+
+
+
+/* SASS */
+@font-face {
+    font-family: Museo;
+    src: url(Museo-700.ttf);
+}
+
+body {
+    margin: 0;
+    font-family: Museo;
+    background-color: #f0f0f0;
+    font-size: 18px;
+    height: 100vh;
+}
+
+
+
+.container {
+    width: 345px;
+    margin: 3em auto;
+    text-align: center;
+    background-color: #faf4f4;
+    border-radius: 5px;
+
+    .greenBackground {
+        height: 206px;
+        background-color: #4ba21c;
+        width: 375px;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 187.5px);
+        z-index: -1;
+    }
+
+    .logo {
+        margin: 2em 0;
+    }
+
+    h2 {
+        margin: 0 3em;
+        font-size: 1.5em;
+    }
+
+    p {
+        line-height: 1.5em;
+        margin: 2em 1em;
+        font-size: smaller;
+    }
+
+    img.scooter {
+        margin: 1em auto;
+    }
+
+    .started {
+        border: 1px solid #4ba21c;
+        color: #4ba21c;
+        border-radius: 20px;
+        padding: 1em 4em;
+        margin: 1em auto;
+    }
+
+    .optout {
+        border: 1px solid #2e332b;
+        color: #2e332b;
+        border-radius: 20px;
+        padding: 1em 4em;
+        margin: 1em auto;
+
+    }
+
+    button {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    body {
+        font-size: 20px;
+        height: 700px;
+    }
+
+    .container {
+        width: 75%;
+        margin: 75px auto 75px 207px;
+        height: 550px;
+        padding-right: 20px;
+    
+        .greenBackground {
+            height: 700px;            background-color: #4ba21c;
+            width: 297px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    
+        .logo {
+            margin: 2em 0;
+            width: 300px;
+        }
+
+        .inner {
+            text-align: left;
+            display: grid;
+            grid-template-columns: 60% auto;
+            display: grid;
+
+            .left {
+                
+                h2 {
+                    margin: 0 0 0 2.4em;
+                    font-size: 2em;
+
+                    span {
+                        display: block;
+                    }
+                }
+            
+                p {
+                    line-height: 1.5em;
+                    margin: 2em 0 2em 6em;
+                    font-size: smaller;
+                }
+    
+            }
+        
+            .right {  
+    
+                img.scooter {
+                    margin: 1em auto;
+                    height: 275px;
+                    position: relative;
+                    bottom: 30px;
+                }
+            }
+        }        
+    
+        .started {
+            float: right;
+            margin-right: 20px;
+            padding: 1em;
+        }
+    
+        .optout {
+            float: left;
+            margin-left: 40px;
+            padding: 1em;    
+        }
+
+        button  {
+            width: 23%;
+        }
+    }
+
+    
+
+
+}
