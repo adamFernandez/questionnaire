@@ -1,160 +1,244 @@
-
-
-
 /* SASS */
 @font-face {
-    font-family: Museo;
-    src: url(Museo-700.ttf);
+  font-family: Museo;
+  src: url(Museo-700.ttf);
+}
+@font-face {
+  font-family: Trebuchet-bold;
+  src: url(TrebuchetMS-Bold.ttf);
+}
+
+html {
+  overflow: scroll;
 }
 
 body {
-    margin: 0;
-    font-family: Museo;
-    background-color: #f0f0f0;
-    font-size: 18px;
-    height: 100vh;
+  margin: 0;
+  font-family: Museo;
+  background-color: #f0f0f0;
+  font-size: 18px;
 }
 
+.hidden {
+  display: none;
+}
 
+.show {
+  display: block;
+}
+#answers {
+  font-family: Trebuchet-bold !important;
+  font-weight: 800;
+}
+.answers {
+  text-align: center;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  gap: 15px;
+
+  .answers-btn-boolean {
+    border-radius: 0%;
+    border: 1px solid #2e332b;
+    height: 35px;
+    line-height: 5px;
+    width: 100px;
+    color: #2e332b;
+  }
+
+  .answers-btn {
+    border-radius: 5px;
+    height: 60px;
+    width: 80px;
+    border: 1px solid #cccccc;
+    color: #6b6b6b;
+    font-size: 1rem;
+    font-weight: 600;
+
+    img {
+      width: 25px;
+    }
+    span {
+      display: block;
+      font-size: 0.5rem;
+    }
+  }
+}
+
+.answers-btn-boolean:hover {
+  transition-duration: 0.5s;
+  border: 1px solid #4ba21c;
+  background-color: #4ba21c;
+  color: white;
+}
+
+.answers-btn:hover {
+  border-color: #4ba21c !important;
+  color: #4ba21c !important;
+}
 
 .container {
-    width: 345px;
-    margin: 3em auto;
-    text-align: center;
-    background-color: #faf4f4;
-    border-radius: 5px;
+  width: 345px;
+  margin: 3em auto;
+  text-align: center;
+  background-color: #faf4f4;
+  border-radius: 5px;
+
+  .greenBackground {
+    height: 206px;
+    background-color: #4ba21c;
+    width: 375px;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 187.5px);
+    z-index: -1;
+  }
+
+  .logo {
+    margin: 2em 0;
+  }
+
+  h2 {
+    font-family: Museo;
+    margin: 0 1.5em;
+    font-size: 1.5em;
+    color: #525252;
+  }
+
+  p {
+    line-height: 1.5em;
+    margin: 2em 1em;
+    font-size: smaller;
+  }
+
+  .right {
+    img {
+      margin: 1em auto;
+      width: 262px;
+    }
+  }
+
+  .started,
+  .next {
+    border: 1px solid #4ba21c;
+    color: #4ba21c;
+  }
+
+  .started:hover,
+  .next:hover {
+    transition-duration: 0.5s;
+    background-color: #4ba21c;
+    color: white;
+  }
+
+  .optout,
+  .back {
+    border: 1px solid #2e332b;
+    color: #2e332b;
+  }
+
+  .optout:hover,
+  .back:hover {
+    background-color: #2e332b;
+    color: white;
+    transition-duration: 0.5s;
+  }
+
+  #buttons-questions {
+    overflow: auto;
+
+    // .next {
+    //   width: 30%;
+    //   float: right;
+    //   margin-right: 15px;
+    // }
+    // .back {
+    //   width: 30%;
+    //   float: left;
+    //   margin-left: 15px;
+    // }
+  }
+
+  button {
+    border-radius: 20px;
+    padding: 1em;
+    width: 85%;
+    margin: 1em auto;
+    outline: none;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  body {
+    font-size: 20px;
+  }
+
+  .container {
+    width: 75%;
+    margin: 75px auto 75px 207px;
+    height: 550px;
+    padding-right: 20px;
 
     .greenBackground {
-        height: 206px;
-        background-color: #4ba21c;
-        width: 375px;
-        position: absolute;
-        top: 0;
-        left: calc(50% - 187.5px);
-        z-index: -1;
+      height: 700px;
+      background-color: #4ba21c;
+      width: 297px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
     }
 
     .logo {
-        margin: 2em 0;
+      margin: 2em 0;
+      width: 300px;
     }
 
-    h2 {
-        margin: 0 3em;
-        font-size: 1.5em;
-    }
+    .inner {
+      text-align: left;
+      display: grid;
+      grid-template-columns: 60% auto;
+      display: grid;
 
-    p {
-        line-height: 1.5em;
-        margin: 2em 1em;
-        font-size: smaller;
-    }
+      .left {
+        h2 {
+          margin: 0 0 0 2.4em;
+          font-size: 2em;
 
-    img.scooter {
-        margin: 1em auto;
+          span {
+            display: block;
+          }
+        }
+
+        p {
+          line-height: 1.5em;
+          margin: 2em 0 2em 6em;
+          font-size: smaller;
+        }
+      }
+
+      .right {
+        img.scooter {
+          margin: 1em auto;
+          height: 275px;
+          position: relative;
+          bottom: 30px;
+        }
+      }
     }
 
     .started {
-        border: 1px solid #4ba21c;
-        color: #4ba21c;
-        border-radius: 20px;
-        padding: 1em 4em;
-        margin: 1em auto;
+      float: right;
+      margin-right: 20px;
     }
 
     .optout {
-        border: 1px solid #2e332b;
-        color: #2e332b;
-        border-radius: 20px;
-        padding: 1em 4em;
-        margin: 1em auto;
-
+      float: left;
+      margin-left: 40px;
     }
 
     button {
-        width: 85%;
+      width: 23%;
+      padding: 1em;
     }
-}
-
-@media only screen and (min-width: 700px) {
-    body {
-        font-size: 20px;
-        height: 700px;
-    }
-
-    .container {
-        width: 75%;
-        margin: 75px auto 75px 207px;
-        height: 550px;
-        padding-right: 20px;
-    
-        .greenBackground {
-            height: 700px;            background-color: #4ba21c;
-            width: 297px;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-    
-        .logo {
-            margin: 2em 0;
-            width: 300px;
-        }
-
-        .inner {
-            text-align: left;
-            display: grid;
-            grid-template-columns: 60% auto;
-            display: grid;
-
-            .left {
-                
-                h2 {
-                    margin: 0 0 0 2.4em;
-                    font-size: 2em;
-
-                    span {
-                        display: block;
-                    }
-                }
-            
-                p {
-                    line-height: 1.5em;
-                    margin: 2em 0 2em 6em;
-                    font-size: smaller;
-                }
-    
-            }
-        
-            .right {  
-    
-                img.scooter {
-                    margin: 1em auto;
-                    height: 275px;
-                    position: relative;
-                    bottom: 30px;
-                }
-            }
-        }        
-    
-        .started {
-            float: right;
-            margin-right: 20px;
-            padding: 1em;
-        }
-    
-        .optout {
-            float: left;
-            margin-left: 40px;
-            padding: 1em;    
-        }
-
-        button  {
-            width: 23%;
-        }
-    }
-
-    
-
-
+  }
 }

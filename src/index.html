@@ -1,42 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <meta http-equiv="Cache-Control" content="no-transform" />
     <meta http-equiv="Cache-Control" content="no-siteapp" />
     <title>
-        questionnaire
+      questionnaire
     </title>
-    <meta name="keywords" content="">
+    <meta name="keywords" content="" />
     <meta name="x5-fullscreen" content="false" />
     <meta name="x5-orientation" content="portrait" />
-    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="stylesheet" href="./assets/css/sass.css">
-</head>
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="./assets/css/sass.css" />
+  </head>
 
-<body>
-    
+  <body>
     <div class="container">
-        <div class="greenBackground"></div>
-        <img src="./assets/img/logo.png" alt="infomentrum logo" class="logo">
-        <div class="inner">
-            <div class="left">
-                <h2>Welcome! <span>Thank you for joining us.</span></h2>
-                <p>We all know that mental wellness is equally important as physical well-being. Let’s go through a couple a questions to find out how you have been doing recently.</p>
-            </div>
-            <div class="right">
-                <img src="./assets/img/scooter.png" alt="guy onto a scooter" class="scooter">
-            </div>
+      <div class="greenBackground"></div>
+      <img src="./assets/img/logo.png" alt="infomentrum logo" class="logo" />
+      <div class="inner">
+        <div class="left">
+          <h2 id="header-question">
+            Welcome! <span>Thank you for joining us.</span>
+          </h2>
+          <p id="paragraph">
+            Welin all know that mental wellness is equally important as physical
+            well-being. Let’s go through a couple a questions to find out how
+            you have been doing recently.
+          </p>
+          <div class="toggle hidden" id="answers-container">
+            <div class="answers" id="answers"></div>
+          </div>
         </div>
-        
-        
-        <button class="started">LET'S GET STARTED</button>
-        <button class="optout">I'D LIKE TO OPT OUT</button>
+        <div class="right">
+          <img
+            id="card-image"
+            src="./assets/img/scooter.png"
+            alt="guy onto a scooter"
+          />
+        </div>
+      </div>
+      <div id="buttons-index">
+        <button class="started" id="started">LET'S GET STARTED</button>
+        <button class="optout" id="optout">I'D LIKE TO OPT OUT</button>
+      </div>
+      <div id="buttons-questions" class="hidden">
+        <button class="back" id="back">BACK</button>
+        <button class="next" id="next">NEXT</button>
+      </div>
+      <div class="clearfix"></div>
     </div>
 
-    
-    
-</body>
-
+    <script src="./assets/js/app.js"></script>
+  </body>
 </html>
